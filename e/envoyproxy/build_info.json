@@ -1,0 +1,14 @@
+{
+  "maintainer": "IBM-Currency-Helper",
+  "package_name": "proxy",
+  "github_url": "https://github.com/maistra/proxy",
+  "version": "2.5",
+  "package_dir": "e/envoyproxy/",
+  "build_script": "envoyproxy_ubi_8.9.sh",
+  "default_branch": "master",
+  "docker_build": false,
+  "2.5": {
+    "dir": "ubi_8.9",
+    "build_script": "envoyproxy_ubi_8.9.sh"
+  }
+}
