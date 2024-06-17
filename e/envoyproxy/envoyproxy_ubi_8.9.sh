@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 # ----------------------------------------------------------------------------
 #
-# Package       : maistra-proxy
+# Package       : proxy
 # Version       : 2.5
 # Source repo   : https://github.com/maistra/proxy
 # Tested on     : UBI 8.9
@@ -18,7 +18,7 @@
 #
 # ----------------------------------------------------------------------------
 
-PACKAGE_NAME=maistra-proxy
+PACKAGE_NAME=proxy
 PACKAGE_ORG=maistra
 SCRIPT_PACKAGE_VERSION=2.5
 PACKAGE_VERSION=${1:-${SCRIPT_PACKAGE_VERSION}}
