@@ -1,12 +1,12 @@
 #!/bin/bash -ex
 # ----------------------------------------------------------------------------
 #
-# Package       : envoy-proxy
+# Package       : maistra-proxy
 # Version       : 2.5
 # Source repo   : https://github.com/maistra/proxy
-# Tested on     : UBI 8.
+# Tested on     : UBI 8.9
 # Language      : C++
-# Travis-Check  : False
+# Travis-Check  : True
 # Script License: Apache License, Version 2 or later
 # Maintainer    : Chandranana Naik <Naik.Chandranana@ibm.com>
 #
@@ -18,7 +18,7 @@
 #
 # ----------------------------------------------------------------------------
 
-PACKAGE_NAME=proxy
+PACKAGE_NAME=maistra-proxy
 PACKAGE_ORG=maistra
 SCRIPT_PACKAGE_VERSION=2.5
 PACKAGE_VERSION=${1:-${SCRIPT_PACKAGE_VERSION}}
@@ -27,7 +27,7 @@ SCRIPT_PACKAGE_VERSION_WO_LEADING_V="${SCRIPT_PACKAGE_VERSION:1}"
 PATH=$PATH:/usr/local/go/bin
 GOPATH=/root/go
 GOBIN=/usr/local/go/bin
-SOURCE_ROOT=$HOME
+SOURCE_ROOT=${PWD}
 
 yum update -y
 yum install -y git wget python3 libtool automake curl gcc vim cmake openssl-devel java-11-openjdk-devel openssl clang perl lld patch java-11-openjdk-devel python3 ninja-build
